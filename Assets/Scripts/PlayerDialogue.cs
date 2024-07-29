@@ -11,6 +11,7 @@ public class PlayerDialogue : MonoBehaviour
     private GameObject _talkPanel;
     private TextMeshProUGUI _talkText;
     private int _talkIndex = 0;
+    public bool isCorrupt = false;
 
     private void Start()
     {
@@ -42,6 +43,7 @@ public class PlayerDialogue : MonoBehaviour
             _talkPanel.SetActive(true);
             _talkIndex = 0;
             _talkText.text = dialogue[_talkIndex]; 
+            if (dialogue[_talkIndex] == "Black Impostor - I'm an impostor") {isCorrupt = true;}
         }
     }
 

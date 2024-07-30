@@ -12,6 +12,7 @@ public class PlayerDialogue : MonoBehaviour
     private TextMeshProUGUI _talkText;
     private int _talkIndex = 0;
     public bool isCorrupt = false;
+    public bool isFixed = false;
 
     private void Start()
     {
@@ -42,8 +43,12 @@ public class PlayerDialogue : MonoBehaviour
             isSpeaking = true;
             _talkPanel.SetActive(true);
             _talkIndex = 0;
-            _talkText.text = dialogue[_talkIndex]; 
-            if (dialogue[_talkIndex] == "Black Impostor - I'm an impostor") {isCorrupt = true;}
+            _talkText.text = dialogue[_talkIndex];
+            Debug.Log(dialogue[_talkIndex]);
+            if (dialogue[_talkIndex] == "Leo: Ahhhhhhh! ") {isCorrupt = true;}
+            if (dialogue[_talkIndex] == "*Please Enter Key*") {
+                isCorrupt = false;
+                isFixed = true; }
         }
     }
 

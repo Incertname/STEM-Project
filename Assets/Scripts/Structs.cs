@@ -22,4 +22,17 @@ public class Structs
         public const string talkText = "TalkText";
         public const string talkPanel = "TalkPanel";
     }
+    public struct Mixers
+    {
+        public const string sfxVolume = "SFXVolume";
+        public const string musicVolume = "MusicVolume";
+    }
+    public struct SoundEffects
+    {
+        public const string rain = "Rain";
+        public const string checkpoint = "Checkpoint";
+        public const string coin = "Coin";
+        public const string heart = "Heart";
+        public const string death = "Death";
+    }
 }

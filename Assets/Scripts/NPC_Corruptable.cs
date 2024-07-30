@@ -7,10 +7,13 @@ public class CorruptableNPC : MonoBehaviour
 {
     public SpriteRenderer spriteRenderer;
     public Sprite newSprite;
+    public Sprite fixedSprite;
     public List<string> dialogue = new List<string>();
     public List<string> corrupt_dialogue = new List<string>();
+    public List<string> fixed_dialogue = new List<string>();
     private GameObject _talkIcon;
     private bool isCorrupt = false;
+    private bool isFixed = false;
 
     private void Start()
     {
@@ -44,6 +47,13 @@ public class CorruptableNPC : MonoBehaviour
 //            dialogue = new List<string>(){"I'm evil now", "hahahaha"};
             spriteRenderer.sprite = newSprite;
             isCorrupt = true;
+        }
+        if ((GameObject.Find("Player").GetComponent<PlayerDialogue>().isFixed) && !isFixed)
+        {
+            dialogue = fixed_dialogue;
+            //            dialogue = new List<string>(){"I'm evil now", "hahahaha"};
+            spriteRenderer.sprite = fixedSprite;
+            isFixed = true;
         }
     }
 

@@ -43312,7 +43312,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -59.407837, y: 63.78134}
+  m_AnchoredPosition: {x: -59.407715, y: 63.78125}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &854101151
@@ -49485,6 +49485,63 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &2118775915
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4665086291913131117, guid: 4fe4d7c3a5c964b8aa2bac462da6ed0a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.31118584
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665086291913131117, guid: 4fe4d7c3a5c964b8aa2bac462da6ed0a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.3320813
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665086291913131117, guid: 4fe4d7c3a5c964b8aa2bac462da6ed0a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.035302144
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665086291913131117, guid: 4fe4d7c3a5c964b8aa2bac462da6ed0a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665086291913131117, guid: 4fe4d7c3a5c964b8aa2bac462da6ed0a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665086291913131117, guid: 4fe4d7c3a5c964b8aa2bac462da6ed0a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665086291913131117, guid: 4fe4d7c3a5c964b8aa2bac462da6ed0a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665086291913131117, guid: 4fe4d7c3a5c964b8aa2bac462da6ed0a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665086291913131117, guid: 4fe4d7c3a5c964b8aa2bac462da6ed0a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665086291913131117, guid: 4fe4d7c3a5c964b8aa2bac462da6ed0a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7400482253771997745, guid: 4fe4d7c3a5c964b8aa2bac462da6ed0a, type: 3}
+      propertyPath: m_Name
+      value: Eggman
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4fe4d7c3a5c964b8aa2bac462da6ed0a, type: 3}
 --- !u!1001 &5344742991185537936
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49660,3 +49717,4 @@ SceneRoots:
   - {fileID: 1511369942}
   - {fileID: 1381141155}
   - {fileID: 2062667996}
+  - {fileID: 2118775915}

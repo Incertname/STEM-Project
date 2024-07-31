@@ -8,11 +8,14 @@ public class PlayerMovment : MonoBehaviour
 {
     private Rigidbody2D _rigRigidbody2D;
     private PlayerDialogue _playerDialogue;
+    private PlayerHide _playerHide;
     private float _xVelocity = 0f;
     private float _yVelocity = 0f;
     public float speed = 3;
     private const string finishTag = "Finish";
+    private const string escapeTag = "Escape";
     public string scaryLevel = "BackDoor";
+    public string realLevel = "project";
     void OnTriggerEnter2D(Collider2D col)
     {
         string colTag = col.tag;
@@ -25,6 +28,12 @@ public class PlayerMovment : MonoBehaviour
                     SceneManager.LoadScene(scaryLevel);
                     return;
                 }
+                case escapeTag:
+                {
+                    Debug.Log("Escape");
+                    SceneManager.LoadScene(realLevel);
+                    return;
+                }
             }
     }
 
@@ -33,12 +42,13 @@ public class PlayerMovment : MonoBehaviour
     {
         _rigRigidbody2D = GetComponent<Rigidbody2D>();
         _playerDialogue = GetComponent<PlayerDialogue>();    
+        _playerHide = GetComponent<PlayerHide>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (_playerDialogue.IsSpeaking())
+        if (_playerDialogue.IsSpeaking() | _playerHide.isHidden)
         {
             _xVelocity = 0;
             _yVelocity = 0;

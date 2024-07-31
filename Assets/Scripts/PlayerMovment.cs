@@ -14,6 +14,7 @@ public class PlayerMovment : MonoBehaviour
     public float speed = 3;
     private const string finishTag = "Finish";
     private const string escapeTag = "Escape";
+    private const string rushTag = "Rush";
     public string scaryLevel = "BackDoor";
     public string realLevel = "project";
     void OnTriggerEnter2D(Collider2D col)
@@ -32,6 +33,18 @@ public class PlayerMovment : MonoBehaviour
                 {
                     Debug.Log("Escape");
                     SceneManager.LoadScene(realLevel);
+                    return;
+                }
+                case rushTag:
+                {
+                    if (_playerHide.isHidden)
+                    {
+                        Debug.Log("Survived");
+                    }
+                    else
+                    {
+                        Debug.Log("Dead");
+                    }
                     return;
                 }
             }

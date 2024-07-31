@@ -46,9 +46,9 @@ public class PlayerDialogue : MonoBehaviour
             _talkText.text = dialogue[_talkIndex];
             Debug.Log(dialogue[_talkIndex]);
             if (dialogue[_talkIndex] == "Leo: Ahhhhhhh! ") {isCorrupt = true;}
-            if (dialogue[_talkIndex] == "*Please Enter Key*") {
-                isCorrupt = false;
-                isFixed = true; }
+            if (dialogue[_talkIndex] == " *Please Enter Key*") {
+                isFixed = true; 
+                Debug.Log("yay");}
         }
     }
 

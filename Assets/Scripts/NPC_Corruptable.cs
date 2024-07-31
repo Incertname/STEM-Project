@@ -54,6 +54,7 @@ public class CorruptableNPC : MonoBehaviour
             //            dialogue = new List<string>(){"I'm evil now", "hahahaha"};
             spriteRenderer.sprite = fixedSprite;
             isFixed = true;
+            Debug.Log("Fixed");
         }
     }
 

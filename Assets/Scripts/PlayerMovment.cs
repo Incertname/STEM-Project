@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovment : MonoBehaviour
 {
@@ -10,6 +11,22 @@ public class PlayerMovment : MonoBehaviour
     private float _xVelocity = 0f;
     private float _yVelocity = 0f;
     public float speed = 3;
+    private const string finishTag = "Finish";
+    public string scaryLevel = "BackDoor";
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        string colTag = col.tag;
+            Debug.Log(colTag);
+            switch (colTag)
+            {
+                case finishTag:
+                {
+                    Debug.Log("Finish");
+                    SceneManager.LoadScene(scaryLevel);
+                    return;
+                }
+            }
+    }
 
     // Start is called before the first frame update
     void Start()

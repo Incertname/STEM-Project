@@ -16,7 +16,8 @@ public class PlayerMovment : MonoBehaviour
     private const string escapeTag = "Escape";
     private const string rushTag = "Rush";
     public string scaryLevel = "BackDoor";
-    public string realLevel = "project";
+    public string realLevel = "FirstLevel";
+    public string rushJumpscare = "RushJumpscare";
     void OnTriggerEnter2D(Collider2D col)
     {
         string colTag = col.tag;
@@ -43,6 +44,7 @@ public class PlayerMovment : MonoBehaviour
                     }
                     else
                     {
+                        SceneManager.LoadScene(rushJumpscare);
                         Debug.Log("Dead");
                     }
                     return;

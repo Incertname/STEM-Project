@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BackDoor.unity
     guid: 05e1ae5aa1bb44ef28df9d9c17b2a012
+  - enabled: 1
+    path: Assets/Scenes/RushJumpscare.unity
+    guid: e4f858d78ccf349c3a6fe1f35a4b0030
   m_configObjects: {}

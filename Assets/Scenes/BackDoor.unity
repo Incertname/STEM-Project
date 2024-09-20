@@ -4734,6 +4734,10 @@ PrefabInstance:
       propertyPath: speed
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 8384855194911907762, guid: 66e7a201ffd7ff544a92f3c8cd502d4a, type: 3}
+      propertyPath: realLevel
+      value: FigureRoom
+      objectReference: {fileID: 0}
     - target: {fileID: 8766260321936788608, guid: 66e7a201ffd7ff544a92f3c8cd502d4a, type: 3}
       propertyPath: m_Enabled
       value: 1

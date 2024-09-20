@@ -19,7 +19,7 @@ public class FigurePathLoader : MonoBehaviour
         _player = GameObject.Find("Player");
         _figure = GameObject.Find("Figure");
     }
-    void FigureAggro()
+    public void FigureAggro()
     {
         if (_figure.GetComponent<AIDestinationSetter>().enabled == false)
         {
@@ -38,6 +38,7 @@ public class FigurePathLoader : MonoBehaviour
         {
                 time_passed = 0.0;
         }
+        _figure.GetComponent<FigureHit>().ChangeTheSound(1);
     }
     void FigureAggroCloset(bool playerHiding)
     {
@@ -58,7 +59,7 @@ public class FigurePathLoader : MonoBehaviour
         // Cast a ray straight down.
         RaycastHit2D hit = Physics2D.Raycast(_figure.transform.position, (_player.transform.position - _figure.transform.position),5,LayerMask.GetMask("Player","Obstacles"));
         Debug.DrawRay(_figure.transform.position, (_player.transform.position - _figure.transform.position) * (5 / Vector3.Distance(_player.transform.position,_figure.transform.position)),Color.red);
-        Debug.Log(Vector3.Distance(_player.transform.position,_figure.transform.position));
+        //Debug.Log(Vector3.Distance(_player.transform.position,_figure.transform.position));
         // If it hits something...
         if (hit.collider != null)
         {

@@ -9,6 +9,8 @@ TagManager:
   - Rush
   - Obstacles
   - Noise
+  - Book
+  - Escape2
   layers:
   - Default
   - TransparentFX

@@ -16,7 +16,7 @@ public class PlayerMovment : MonoBehaviour
     private const string escapeTag = "Escape"; // tag for the collision of the exit of the scary room
     private const string rushTag = "Rush"; // tag for Rush's collision
     public string scaryLevel = "BackDoor"; // Tag for the actual scary level scene
-    public string realLevel = "FirstLevel"; // tag for the main world scene
+    public string realLevel = "FigureRoom"; // tag for the main world scene
     public string rushJumpscare = "RushJumpscare"; // tag for the Rush Jumpscare scene
     public bool isCrouching = false;
     void OnTriggerEnter2D(Collider2D col)

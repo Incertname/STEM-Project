@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class Book : MonoBehaviour
 {
+    public GameObject _player;
     private GameObject _talkIcon;
     // Start is called before the first frame update
     void Start()
     {
         _talkIcon = transform.Find(Structs.GameObjects.talkIcon).gameObject;
         _talkIcon.SetActive(false);
+        _player = GameObject.Find("Player");
         
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -34,6 +36,7 @@ public class Book : MonoBehaviour
         if (_talkIcon.activeSelf && Input.GetKeyDown(KeyCode.E))
         {
             Destroy(gameObject);
+            _player.GetComponent<PlayerBookCollect>().CollectBook();
         }
     }
 }

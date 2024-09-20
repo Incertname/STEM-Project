@@ -32,21 +32,25 @@ public class PlayerBookCollect : MonoBehaviour
             canCollect = false;
         }
     }
+    public void CollectBook()
+    {
+        books++;
+            canCollect = false;
+            _libMap.GetComponent<FigurePathLoader>().FigureAggro();
+            Debug.Log("Figure Aggro Book");
+    }
     void Start()
     {
         _libMap = GameObject.Find("Library Map");
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
-        if (canCollect && Input.GetKeyDown(KeyCode.E))
-        {
-            books++;
-            canCollect = false;
-            _libMap.GetComponent<FigurePathLoader>().FigureAggro();
-            Debug.Log("Figure Aggro Book");
-        }
+//        if (canCollect && Input.GetKeyDown(KeyCode.E))
+//        {
+//            
+//        }
         
     }
 }
